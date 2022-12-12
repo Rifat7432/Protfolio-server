@@ -32,8 +32,8 @@ const run = async () => {
     })
     app.get('/project/:id',async(req,res)=>{
         const id = req.params.id
-        const result = await ProfileCollection.findOne({_id:ObjectId(id)})
-        res.send(result)
+        const project = await ProfileCollection.findOne({_id:ObjectId(id)})
+        res.send(project)
     })
   } finally {
   }
